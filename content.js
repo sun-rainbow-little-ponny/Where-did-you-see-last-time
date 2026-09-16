@@ -31,7 +31,7 @@ function scroll_watcher() {
     });
 };
 
-// example: scroll_to(47)
+// using example: scroll_to(47)
 function scroll_to(percent) {
     if (percent <= 0 ) { return; }
 
@@ -101,14 +101,17 @@ function attach_banner() {
     setTimeout(() => {
         card.classList.remove("in");          
         setTimeout(() => host.remove(), 250);
-    }, 3000);
+    }, 5000);
 }
+
 
 async function main() {
     await init();
 
     scroll_watcher();
     attach_banner();
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     scroll_to(percent);
 }

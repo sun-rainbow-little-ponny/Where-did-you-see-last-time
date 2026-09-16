@@ -19,11 +19,3 @@ chrome.tabs.onUpdated.addListener(async (tab_id, change_info, tab) => {
 function is_intra_url(url) {
     return url.startsWith("file");
 }
-
-
-chrome.runtime.onMessage.addListener((msg, sender, send_response) => {
-    if (msg.type !== "pos") { return; }
-
-});
-
-
