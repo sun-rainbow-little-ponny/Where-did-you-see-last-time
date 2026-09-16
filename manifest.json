@@ -1,0 +1,13 @@
+{
+    "name" : "last-read-positon-recorder",
+    "description" : "Record where you have readed last time",
+    "manifest_version" : 3,
+    "version" : "1.0",
+    "permissions" : ["storage", "tabs", "scripting"],
+    "background": { "service_worker": "background.js" },
+    "host_permissions" : ["file:///*"],
+    "action" : {
+        "default_popup" : "popup.html",
+        "default_title" : "阅读位置缓存"
+    }
+}
